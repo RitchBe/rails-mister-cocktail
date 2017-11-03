@@ -5,7 +5,12 @@ class CocktailsController < ApplicationController
   end
 
   def show
+    #   @images = [ "footer3.jpg" ,"title3.jpg",  "title2.jpg"]
+    # @rand_image = @images[rand(images.size)]
+    # @rand_image
+
   end
+
 
   def new
     @cocktail = Cocktail.new
@@ -31,4 +36,5 @@ private
   def find_cocktail
     @cocktail = Cocktail.find(params[:id])
   end
+
 end

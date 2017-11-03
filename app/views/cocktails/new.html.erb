@@ -1,12 +1,43 @@
 
 <div class="new-cocktail-container">
-<h2>New Cocktail</h2>
-<%= form_for(@cocktail) do |f| %>
+<h2 class="new-cocktail-title" id="NewCocktailTitle">New Cocktail</h2>
 
-  <%= f.label :name %><br>
-  <%= f.text_field :name %>
-  <%= f.file_field :photo, as: :attachinary %>
+<%= form_for(@cocktail) do |f| %>
+<div class="container-new">
+  <div>
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "name-input"%>
+</div>
+  <div class="image-upload">
+   <label for="file-input">
+    <i class="fa fa-camera" aria-hidden="true"></i>
+   </label>
+
+   <%= f.file_field :photo, as: :attachinary, id: "file-input" %>
+</div>
+</div>
+<div>
+  <br>
+  <div class="create-button">
   <%= f.submit class: "submit-btn" %>
+</div>
+</div>
 
 <% end %>
 </div>
+</div>
+
+<script>
+function randombg(){
+  let random= Math.floor(Math.random() * 6) + 0;
+  let bigSize = ["url(<%= asset_path('title.jpg') %>)",
+                  "url(<%= asset_path('title2.jpg') %>)",
+                  "url(<%= asset_path('title3.jpg') %>)",
+                  "url(<%= asset_path('footer.jpg') %>)",
+                  "url(<%= asset_path('footer3.jpg') %>)",
+                  "url(<%= asset_path('footer2.jpg') %>)",
+                  ];
+  document.getElementById("NewCocktailTitle").style.backgroundImage = bigSize[random];
+}
+randombg()
+</script>

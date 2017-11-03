@@ -1,11 +1,48 @@
-<h2><%= @cocktail.name %></h2>
-<ul>
+
+
+<h2 class="cocktail-title" id="CocktailTitle"><%= @cocktail.name %></h2>
+<div class="container-receipe">
+  <% if @cocktail.photo? %>
+  <div class="cocktail-show-picture" style="background-image: linear-gradient(-225deg, rgba(255,200,0,0.5) 0%, rgba(150,150,150,0.3) 50%), url('<%= cl_image_path @cocktail.photo.path, height: 500 %>');" >
+    <% else %>
+     <div class="cocktail-show-picture" style="background-image: linear-gradient(-225deg, rgba(255,200,0,0.5) 0%, rgba(150,150,150,0.3) 50%), url(<%= asset_path 'framboisita.jpg'%>);" >
+      <% end %>
+      </div>
+
+      <div class="ingredients">
+<ul class="ingredient-list">
+
+
   <% @cocktail.doses.each do |d| %>
-<li><%= Ingredient.find(d.ingredient_id).name %><br>
-<%= d.description %><br>
+<li class="ingredients"><%= Ingredient.find(d.ingredient_id).name %>
+<strong><%= d.description %></strong>
 <%= link_to "Delete", "/doses/#{d.id}" , method: :delete  %>
 </li>
   <% end %>
 </ul>
-<%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail.id)  %>
-<%= link_to "Index", cocktails_path  %>
+
+<div class="button-show">
+<div class="add-ingredient">
+<%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail.id), class: "add-ingredient"  %>
+</div>
+<div class="index">
+<%= link_to "Back to index", cocktails_path, class: "index" %>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+function randombg(){
+  let random= Math.floor(Math.random() * 6) + 0;
+  let bigSize = ["url(<%= asset_path('title.jpg') %>)",
+                  "url(<%= asset_path('title2.jpg') %>)",
+                  "url(<%= asset_path('title3.jpg') %>)",
+                  "url(<%= asset_path('footer.jpg') %>)",
+                  "url(<%= asset_path('footer3.jpg') %>)",
+                  "url(<%= asset_path('footer2.jpg') %>)",
+                  ];
+  document.getElementById("CocktailTitle").style.backgroundImage = bigSize[random];
+}
+randombg()
+</script>

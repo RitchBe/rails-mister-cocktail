@@ -14,7 +14,6 @@ class DosesController < ApplicationController
       render :new
     end
 
-
   end
 
   def destroy

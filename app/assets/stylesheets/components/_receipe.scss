@@ -1,0 +1,54 @@
+div.cocktail-show-picture {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  width: 40vw;
+  border-radius: 5px;
+  // border: 1px solid #aaa;
+  box-shadow: 0 0 30px #ddd;
+}
+
+div.container-receipe {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 10%;
+  margin-bottom: 100px;
+}
+
+
+li.ingredients {
+  font-size: 150%;
+}
+
+ul.ingredient-list {
+  margin-bottom: 50px;
+}
+
+h2.cocktail-title, h2.new-cocktail-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: lighter;
+  color: white;  /* Fallback: assume this color ON TOP of image */
+  // background: url(asset_path('title3.jpg')) no-repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  background-position: center;
+  background-image: none;
+  font-size: 150px;
+  background-size: cover;
+  border-bottom: 5px solid pink;
+  margin-left: 60px;
+  margin-right: 60px;
+  padding-bottom: 50px;
+  border-image: url(asset_path('title3.jpg')) 30 30;
+
+}
+
+.button-show {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-ingredient {
+  margin-bottom: 50px;
+}

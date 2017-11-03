@@ -15,7 +15,7 @@
 
 <%= link_to  cocktail_path(c), id: "link-card"  do %>
 <% if c.photo? %>
-  <div class="card-body" style="background-image: linear-gradient(-225deg, rgba(255,200,0,0.5) 0%, rgba(150,150,150,0.3) 50%), url('<%= cl_image_path c.photo.path %>');" >
+  <div class="card-body" style="background-image: linear-gradient(-225deg, rgba(255,200,0,0.5) 0%, rgba(150,150,150,0.3) 50%), url('<%= cl_image_path c.photo.path%>');" >
     <% else %>
      <div class="card-body" style="background-image: linear-gradient(-225deg, rgba(255,200,0,0.5) 0%, rgba(150,150,150,0.3) 50%), url(<%= asset_path 'framboisita.jpg'%>);" >
       <% end %>

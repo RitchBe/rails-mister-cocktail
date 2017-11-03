@@ -1,0 +1,22 @@
+div.container-new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+.name-input {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+
+
+.fa-camera {
+  font-size: 250%;
+  margin-left: 10px;
+  color: orange;
+  transition:0.5s;
+  &:hover {
+    color: #F7D72C;
+    transition: 0.5s
+  }
+}
