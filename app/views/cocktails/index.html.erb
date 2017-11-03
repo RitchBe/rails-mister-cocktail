@@ -11,10 +11,14 @@
 <div class="cards">
 
 <% @cocktails.each do |c| %>
-<div class="card" style="background-image: linear-gradient(-225deg, rgba(200,200,200,0.8) 0%, rgba(50,50,50,0.0) 50%), url(<%= asset_path 'footer3.jpg' %>);">
+<div class="card" style="background-image: linear-gradient(-225deg, rgba(200,200,200,0.8) 0%, rgba(50,50,50,0.0) 50%),url(<%= asset_path 'footer3.jpg' %>)">
 
 <%= link_to  cocktail_path(c), id: "link-card"  do %>
-  <div class="card-body" style="background-image: linear-gradient(-225deg, rgba(255,200,0,0.5) 0%, rgba(150,150,150,0.3) 50%), url(<%= asset_path 'framboisita.jpg' %>);" >
+<% if c.photo? %>
+  <div class="card-body" style="background-image: linear-gradient(-225deg, rgba(255,200,0,0.5) 0%, rgba(150,150,150,0.3) 50%), url('<%= cl_image_path c.photo.path %>');" >
+    <% else %>
+     <div class="card-body" style="background-image: linear-gradient(-225deg, rgba(255,200,0,0.5) 0%, rgba(150,150,150,0.3) 50%), url(<%= asset_path 'framboisita.jpg'%>);" >
+      <% end %>
 </div>
 <div class="card-footer text-center">
 <li class="space-between"><p><%= c.name %></p>
@@ -25,5 +29,6 @@
 <% end %>
 </ul>
 </div>
-
-<%= link_to "New Cocktail", new_cocktail_path, id: "new-cocktail"  %>
+<div class="new-cocktail-link">
+<%= link_to "Add a Cocktail", new_cocktail_path, class: "new-cocktail"  %>
+</div>

@@ -1,0 +1,27 @@
+.new-cocktail {
+  text-decoration: none;
+  padding: 20px 40px;
+  color: white;  /* Fallback: assume this color ON TOP of image */
+   background: url(asset_path('footer3.jpg')) no-repeat;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   border: 5px solid pink;
+  border-image: url(asset_path('footer3.jpg')) 30 30;
+   background-size: cover;
+   font-size: 100px;
+   transition: 0.4s ease;
+    -webkit-transition:  0.4s;
+
+   &:hover {
+    transition: 0.4s ease;
+    -webkit-transition:  0.4s;
+    transform: translate(0,-25px);
+    box-shadow: 0 0 50px #bbb;
+   }
+}
+
+.new-cocktail-link {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}

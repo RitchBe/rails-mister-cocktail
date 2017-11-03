@@ -13,9 +13,7 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = cocktail_params
-
-    byebug
-    new_cocktail = Cocktail.create(image: params[:cocktail][:image].file_url, name: cocktail_params)
+    new_cocktail = Cocktail.create(cocktail_params)
     @cocktail = new_cocktail
     if @cocktail.save
       redirect_to "/cocktails/#{new_cocktail.id}"
@@ -27,7 +25,7 @@ class CocktailsController < ApplicationController
 
 private
   def cocktail_params
-    params.require(:cocktail).permit(:name, :image)
+    params.require(:cocktail).permit(:name, :photo)
   end
 
   def find_cocktail

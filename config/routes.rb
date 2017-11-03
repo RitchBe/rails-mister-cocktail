@@ -4,4 +4,5 @@ Rails.application.routes.draw do
     resources :doses, only: [:create, :new]
   end
   delete "/doses/:id", to: "doses#destroy"
+  mount Attachinary::Engine => "/attachinary"
 end
