@@ -10,6 +10,7 @@ end
 gem 'rails', '~> 5.1.4'
 gem "open_uri_redirections"
 gem "json"
+gem 'figaro'
 gem "font-awesome-rails"
 gem "paperclip", "~> 4.1.1"
 # Use postgresql as the database for Active Record
