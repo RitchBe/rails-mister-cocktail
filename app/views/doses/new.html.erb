@@ -1,0 +1,11 @@
+<div class="new-dose-container">
+<h2>New ingredient for <strong><%= @cocktail.name %></strong></h2>
+<%= form_for([@cocktail, @dose]) do |f| %>
+  <%= f.select :ingredient_id, @ingredients  %>
+  <%= f.label :description %><br>
+  <%= f.text_field :description %>
+
+  <%= f.submit class: "submit-btn" %>
+
+<% end %>
+</div>

@@ -1,0 +1,12 @@
+<div class="new-cocktail-container">
+<h2>New Cocktail</h2>
+<%= form_for(@cocktail) do |f| %>
+
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+  <%= f.label :image %>
+  <%= f.file_field :image, method: :post, multipart: true%>
+  <%= f.submit class: "submit-btn" %>
+
+<% end %>
+</div>

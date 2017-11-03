@@ -1,0 +1,29 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(255,200,0,0.5) 0%, rgba(150,150,150,0.3) 50%), url(<%= asset_path 'bg.jpg' %>)">
+  <div class="banner-content">
+<h2>Cocktail List</h2>
+</div>
+<a href="#cocktails">
+<i class="fa fa-arrow-down" aria-hidden="true" id="arrow"></i>
+</a>
+</div>
+</div>
+<ul id="cocktails">
+<div class="cards">
+
+<% @cocktails.each do |c| %>
+<div class="card" style="background-image: linear-gradient(-225deg, rgba(200,200,200,0.8) 0%, rgba(50,50,50,0.0) 50%), url(<%= asset_path 'footer3.jpg' %>);">
+
+<%= link_to  cocktail_path(c), id: "link-card"  do %>
+  <div class="card-body" style="background-image: linear-gradient(-225deg, rgba(255,200,0,0.5) 0%, rgba(150,150,150,0.3) 50%), url(<%= asset_path 'framboisita.jpg' %>);" >
+</div>
+<div class="card-footer text-center">
+<li class="space-between"><p><%= c.name %></p>
+</li>
+</div>
+</div>
+<% end %>
+<% end %>
+</ul>
+</div>
+
+<%= link_to "New Cocktail", new_cocktail_path, id: "new-cocktail"  %>
