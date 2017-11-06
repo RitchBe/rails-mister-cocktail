@@ -10,6 +10,7 @@ class CocktailsController < ApplicationController
     # @rand_image
     find_cocktail
     all_ingredients
+    @ingredients
     @dose = Dose.new
 
 
