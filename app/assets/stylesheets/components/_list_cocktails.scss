@@ -18,6 +18,9 @@ ul {
   flex: 1 0 auto;
   background-size: cover;
   background-position: bottom;
+  @media screen and (max-width:400px) {
+    width: 300px;
+  }
 }
 
 .card:hover .card-body {

@@ -33,7 +33,7 @@ ul.ingredient-list {
 h2.cocktail-title, h2.new-cocktail-title {
   font-family: 'Playfair Display', serif;
   font-weight: lighter;
-  color: white;  /* Fallback: assume this color ON TOP of image */
+  color: black;  /* Fallback: assume this color ON TOP of image */
   // background: url(asset_path('title3.jpg')) no-repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
