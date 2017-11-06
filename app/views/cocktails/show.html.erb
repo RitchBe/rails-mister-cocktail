@@ -33,7 +33,7 @@
 <div class="form-group">
 <!--  <%= f.select :ingredient_id, @ingredients, {include_blank: 'Select Ingredient'} %><br>
  -->
-  <input type="text" id="dose_ingredient_id" name="dose[ingredient_id]" onkeyup="searchIngredient()" placeholder="Search for ingredients..">
+  <input type="text" id="dose_ingredient_id" name="dose[ingredient_id]" onkeyup="searchIngredient()" placeholder="Add ingredient..">
   <ul id="ingredients-list">
     <% @ingredients.each do |i| %>
     <li class="list"><p><%= i %></p></li>
