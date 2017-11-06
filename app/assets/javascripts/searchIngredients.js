@@ -25,13 +25,13 @@ function searchIngredient() {
 
 
 
-let li = document.getElementsByClassName("list");
+// let li = document.getElementsByClassName("list");
 
-document.addEventListener('DOMContentLoaded', function(){
-    for (var i = 0 ; i < li.length; i++) {
-   li[i].addEventListener('click' , function(event) {
-    console.log(event.target.innerText)
-    document.getElementById('dose_ingredient_id').value = event.target.innerText;
-   });
-}
-}, false);
+// document.addEventListener('DOMContentLoaded', function(){
+//     for (var i = 0 ; i < li.length; i++) {
+//    li[i].addEventListener('click' , function(event) {
+//     console.log(event.target.innerText)
+//     document.getElementById('dose_ingredient_id').value = event.target.innerText;
+//    });
+// }
+// }, false);

@@ -70,6 +70,17 @@ function randombg(){
                   "url(<%= asset_path('flower2.jpg') %>)",
                   ];
   document.getElementById("CocktailTitle").style.backgroundImage = bigSize[random];
+
 }
 randombg()
+let li = document.getElementsByClassName("list");
+
+document.addEventListener('DOMContentLoaded', function(){
+    for (var i = 0 ; i < li.length; i++) {
+   li[i].addEventListener('click' , function(event) {
+    console.log(event.target.innerText)
+    document.getElementById('dose_ingredient_id').value = event.target.innerText;
+   });
+}
+}, false);
 </script>
