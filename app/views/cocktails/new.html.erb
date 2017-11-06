@@ -32,11 +32,11 @@
 function randombg(){
   let random= Math.floor(Math.random() * 6) + 0;
   let bigSize = ["url(<%= asset_path('title.jpg') %>)",
-                  "url(<%= asset_path('title2.jpg') %>)",
-                  "url(<%= asset_path('title3.jpg') %>)",
+                  "url(<%= asset_path('graysmoke.jpg') %>)",
+                  "url(<%= asset_path('pinksmoke.jpg') %>)",
                   "url(<%= asset_path('footer.jpg') %>)",
                   "url(<%= asset_path('footer3.jpg') %>)",
-                  "url(<%= asset_path('footer2.jpg') %>)",
+                  "url(<%= asset_path('water.jpg') %>)",
                   ];
   document.getElementById("NewCocktailTitle").style.backgroundImage = bigSize[random];
 }
