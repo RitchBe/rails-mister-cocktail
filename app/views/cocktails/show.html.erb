@@ -31,7 +31,14 @@
 
 <%= form_for([@cocktail, @dose]) do |f| %>
 <div class="form-group">
-  <%= f.select :ingredient_id, @ingredients, {include_blank: 'Select Ingredient'} %><br>
+<!--  <%= f.select :ingredient_id, @ingredients, {include_blank: 'Select Ingredient'} %><br>
+ -->
+  <input type="text" id="dose_ingredient_id" name="dose[ingredient_id]" onkeyup="searchIngredient()" placeholder="Search for ingredients..">
+  <ul id="ingredients-list">
+    <% @ingredients.each do |i| %>
+    <li class="list"><p><%= i %></p></li>
+    <% end %>
+</ul>
 </div>
 <div class="form-group">
   <%= f.label :description %><br>
