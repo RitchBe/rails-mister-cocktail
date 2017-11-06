@@ -6,6 +6,7 @@ function searchIngredient() {
     ul = document.getElementById("ingredients-list");
     li = ul.getElementsByTagName('li');
 
+    console.log("hello from searchingredient")
     // Loop through all list items, and hide those who don't match the search query
     for (i = 0; i < li.length; i++) {
         p = li[i].getElementsByTagName("p")[0];
