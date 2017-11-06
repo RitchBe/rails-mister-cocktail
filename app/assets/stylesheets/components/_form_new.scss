@@ -20,6 +20,16 @@ div.container-new {
   }
 }
 
+label.file-input {
+  color: orange;
+  font-size: 120%;
+  transition: 0.5s;
+  &:hover {
+    color: #F7D72C;
+    transition: 0.5s
+  }
+}
+
 
 /* NEW FORM STYLE FOR DOSES ***************************************************
 */

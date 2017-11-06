@@ -9,8 +9,9 @@
   <%= f.text_field :name, class: "name-input"%>
 </div>
   <div class="image-upload">
-   <label for="file-input">
+   <label for="file-input" class="file-input">
     <i class="fa fa-camera" aria-hidden="true"></i>
+    Upload Image
    </label>
 
    <%= f.file_field :photo, as: :attachinary, id: "file-input" %>
