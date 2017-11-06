@@ -8,6 +8,10 @@ class CocktailsController < ApplicationController
     #   @images = [ "footer3.jpg" ,"title3.jpg",  "title2.jpg"]
     # @rand_image = @images[rand(images.size)]
     # @rand_image
+    find_cocktail
+    all_ingredients
+    @dose = Dose.new
+
 
   end
 
@@ -35,6 +39,9 @@ private
 
   def find_cocktail
     @cocktail = Cocktail.find(params[:id])
+  end
+  def all_ingredients
+    @ingredients = Ingredient.all.map {|i| "#{i.id} #{i.name} "}
   end
 
 end

@@ -22,15 +22,35 @@
 </ul>
 
 <div class="button-show">
-<div class="add-ingredient">
+<!-- <div class="add-ingredient">
 <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail.id), class: "add-ingredient"  %>
+</div> -->
+
 </div>
-<div class="index">
+<div class="new-dose-container">
+
+<%= form_for([@cocktail, @dose]) do |f| %>
+<div class="form-group">
+  <%= f.select :ingredient_id, @ingredients, {include_blank: 'Select Ingredient'} %><br>
+</div>
+<div class="form-group">
+  <%= f.label :description %><br>
+  <%= f.text_field :description %><br>
+</div>
+<div class="form-group create-button">
+
+  <%= f.submit class: "submit-btn new-dose-btn" %>
+</div>
+<% end %>
+</div>
+
+</div>
+
+</div>
+
+<!-- <div class="index text-center">
 <%= link_to "Back to index", cocktails_path, class: "index" %>
-</div>
-</div>
-</div>
-</div>
+</div> -->
 
 <script>
 function randombg(){
