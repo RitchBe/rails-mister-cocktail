@@ -6,6 +6,9 @@ div.cocktail-show-picture {
   border-radius: 5px;
   // border: 1px solid #aaa;
   box-shadow: 0 0 30px #ddd;
+  @media screen and (max-width: 715px) {
+    width: 100%;
+  }
 }
 
 div.container-receipe {
@@ -13,6 +16,9 @@ div.container-receipe {
   justify-content: space-around;
   margin: 0 10%;
   margin-bottom: 100px;
+  @media screen and (max-width: 715px) {
+    flex-direction: column;
+  }
 }
 
 
@@ -41,6 +47,12 @@ h2.cocktail-title, h2.new-cocktail-title {
   margin-right: 60px;
   padding-bottom: 50px;
   border-image: url(asset_path('title3.jpg')) 30 30;
+  @media screen and (max-width: 800px) {
+    font-size: 400%;
+    border-bottom-width: 1px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 
 }
 
