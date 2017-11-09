@@ -15,9 +15,14 @@ div.container-receipe {
   display: flex;
   justify-content: space-around;
   margin: 0 10%;
-  margin-bottom: 100px;
+  // margin-bottom: 100px;
+
+  align-items: center;
   @media screen and (max-width: 715px) {
     flex-direction: column;
+  }
+  @media screen and (min-width: 800px) {
+    height: 100vh;
   }
 }
 
@@ -30,31 +35,48 @@ ul.ingredient-list {
   margin-bottom: 50px;
 }
 
-h2.cocktail-title, h2.new-cocktail-title {
-  font-family: 'Playfair Display', serif;
-  font-weight: lighter;
-  color: black;  /* Fallback: assume this color ON TOP of image */
-  // background: url(asset_path('title3.jpg')) no-repeat;
+
+div.title-cocktail {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2.cocktail-title, h2.new-cocktail-title, .receipe-arrow {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
   background-position: center;
   background-image: none;
-  font-size: 150px;
   background-size: cover;
-  border-bottom: 5px solid rgb(100,100,100);
-  margin-left: 60px;
-  margin-right: 60px;
-  padding-bottom: 50px;
-  border-image: url(asset_path('title3.jpg')) 30 30;
+
+  font-weight: lighter;
+
+}
+h2.cocktail-title, h2.new-cocktail-title {
+  font-family: 'Playfair Display', serif;
+  color: black;
+  font-size: 150px;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-bottom: 0px;
+
   @media screen and (max-width: 800px) {
     font-size: 400%;
-    border-bottom-width: 1px;
     margin-left: 20px;
     margin-right: 20px;
   }
 
 }
+
+.receipe-arrow {
+  font-size: 250%;
+  position: absolute;
+  bottom: 5%;
+}
+
 
 .button-show {
   display: flex;

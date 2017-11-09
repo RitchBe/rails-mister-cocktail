@@ -1,7 +1,11 @@
 
-
+<div class="title-cocktail">
 <h2 class="cocktail-title" id="CocktailTitle"><%= @cocktail.name %></h2>
-<div class="container-receipe">
+<a href="javascript:void(0);" onclick="window.scroll(0,1000);">
+<i class="fa fa-arrow-down receipe-arrow" id="test" aria-hidden="true" id="arrow"></i>
+</a>
+</div>
+<div class="container-receipe" id="receipe">
   <% if @cocktail.photo? %>
   <div class="cocktail-show-picture" style="background-image: linear-gradient(-225deg, rgba(255,200,0,0.5) 0%, rgba(150,150,150,0.3) 50%), url('<%= cl_image_path @cocktail.photo.path, height: 500 %>');" >
     <% else %>
@@ -70,6 +74,8 @@ function randombg(){
                   "url(<%= asset_path('flower2.jpg') %>)",
                   ];
   document.getElementById("CocktailTitle").style.backgroundImage = bigSize[random];
+  document.getElementById("test").style.backgroundImage = bigSize[random];
+
 
 }
 randombg()
