@@ -1,20 +1,23 @@
 .banner {
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 i.banner-arrow {
-  margin-bottom: 100px;
+  // margin-bottom: 100px;
+  position: absolute;
+  bottom: 10%;
   font-size: 200%;
-  background: -webkit-linear-gradient(yellow, orange);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  // background: -webkit-linear-gradient(orange, yellow);
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  color: white;
   transition: 0.5s
 }
 
@@ -27,16 +30,20 @@ i.banner-arrow:hover {
 }
 
 .banner-content > h2 {
-  background: -webkit-linear-gradient(yellow, orange);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top: 150px;
+  // background: -webkit-linear-gradient(yellow, orange);
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+
+
+  color: white;
+  // margin-top: 150px;
   // font-family: "Raleway",serif;
-  font-size: 300%;
+  font-size: 400%;
+  margin-bottom: 30px;
   letter-spacing: 20px;
-  text-shadow:0px 1px rgba(0, 0, 0, 0.2);
+  text-shadow:0px 0px 10px darkgray;
   margin-bottom: 20px;
-  border-bottom: 1px solid gold;
+  // border-bottom: 1px solid gold;
   @media screen and (max-width: 500px) {
     font-size: 200%;
   }
@@ -52,4 +59,11 @@ i.banner-arrow:hover {
 
 .banner-content > a {
   font-size: 20px;
+}
+
+
+
+p.banner-p {
+  color: #E38E0E;
+  font-size: 150%;
 }

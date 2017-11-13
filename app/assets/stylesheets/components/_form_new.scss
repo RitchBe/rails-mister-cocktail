@@ -104,3 +104,9 @@ select {
   overflow: auto;
   margin: 0px;
 }
+
+h2.new-cocktail-title {
+  @media screen and (min-width: 700px) {
+    margin-bottom: 150px;
+  }
+}
